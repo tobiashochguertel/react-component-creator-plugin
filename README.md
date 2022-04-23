@@ -14,7 +14,7 @@ LESS, Spec, Storybook.
 
 #修改点
 
-主要是针对项目做了适配修改，比如新增模板文件、测试文件单独存放等
+主要是针对项目做了适配修改，比如新增模板文件、测试文件单独存放等等
 
 ![image-20220423225506561](https://raw.githubusercontent.com/KingZhang/kingzhang.github.io/blog/source/assets/img/image-20220423225506561.png)
 
