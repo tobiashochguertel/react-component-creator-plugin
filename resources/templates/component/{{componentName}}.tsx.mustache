@@ -1,7 +1,14 @@
 import React from 'react';
+import * as style from './{{ componentName }}.less';
 
-export type {{ componentNamePascalCase }}Props = {}
+export type {{ componentCamelcaseName }}Props = {}
 
-export default function {{ componentNamePascalCase }}({}: {{ componentNamePascalCase }}Props) {
-    return (<div className="{{ componentName }}"/>);
+const {{ componentCamelcaseName }} = ({}: {{ componentCamelcaseName }}Props) => {
+    return (
+      <div className={style.{{ className }}}>
+        {{ componentName }}
+      </div>
+    );
 }
+
+export default {{ componentCamelcaseName }};
