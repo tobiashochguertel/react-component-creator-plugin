@@ -24,7 +24,7 @@ public class FileUtils {
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            result.append(line).append("\n");
+            result.append(line).append("\r\n");
         }
 
         scanner.close();

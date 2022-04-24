@@ -12,7 +12,7 @@ LESS, Spec, Storybook.
 
 
 
-#修改点
+# 修改点
 
 主要是针对项目做了适配修改，比如新增模板文件、测试文件单独存放等等
 
@@ -21,7 +21,7 @@ LESS, Spec, Storybook.
 ![image-20220423233459847](https://raw.githubusercontent.com/KingZhang/kingzhang.github.io/blog/source/assets/img/image-20220423233459847.png)
 
 项目构建需要使用低版本idea库，高版本不兼容，ideaIU-2020.2.4.win  https://www.jetbrains.com/idea/download/other.html
-
+直接导入已构建的react-component-creator-plugin-0.6.0.zip可直接使用
 
 
 # Custom Templates
