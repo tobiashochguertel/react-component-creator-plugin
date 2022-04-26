@@ -77,6 +77,21 @@ public class ReducerCreateOptions extends AbstractOptions {
         return null;
     }
 
+    @Override
+    public ArrayList<String> getHookFiles() {
+        return null;
+    }
+
+    @Override
+    public boolean getCreateSubComponent() {
+        return false;
+    }
+
+    @Override
+    public boolean getCreateViewModel() {
+        return false;
+    }
+
     public void setActionTemplateFile(String actionTemplateFile) {
         if (actionTemplateFile == null) {
             this.actionTemplateFile = null;

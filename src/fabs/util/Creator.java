@@ -36,6 +36,7 @@ public class Creator implements Runnable {
 
         String[] files = options.getFileList();
         String[] testFiles = options.getTestFileList();
+        String[] hookFiles = options.getHookFileList();
 
         for (int i = 0; i < files.length; i++) {
             String file = files[i];
@@ -48,6 +49,22 @@ public class Creator implements Runnable {
                 String file = testFiles[i];
                 utils.writeFile(renderer.render(file, variablemap), testDirectory.createChildData(testDirectory, TemplateRenderer.transformTemplateName(file, variablemap)));
             }
+        }
+
+        if (hookFiles.length > 0) {
+            VirtualFile hookDirectory = componentDirectory.createChildDirectory(componentDirectory, "hooks");
+            for (int i = 0; i < hookFiles.length; i++) {
+                String file = hookFiles[i];
+                utils.writeFile(renderer.render(file, variablemap), hookDirectory.createChildData(hookDirectory, TemplateRenderer.transformTemplateName(file, variablemap)));
+            }
+        }
+
+        if (options.getCreateSubComponent()) {
+            componentDirectory.createChildDirectory(componentDirectory, "components");
+        }
+
+        if (options.getCreateViewModel()) {
+            componentDirectory.createChildDirectory(componentDirectory, "viewModel");
         }
     }
 

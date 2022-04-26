@@ -21,8 +21,12 @@ LESS, Spec, Storybook.
 ![image-20220423233459847](https://raw.githubusercontent.com/KingZhang/kingzhang.github.io/blog/source/assets/img/image-20220423233459847.png)
 
 项目构建需要使用低版本idea库，高版本不兼容，ideaIU-2020.2.4.win  https://www.jetbrains.com/idea/download/other.html
-直接导入已构建的react-component-creator-plugin-0.6.0.zip可直接使用
+直接导入已构建的react-component-creator-plugin-0.X.0.zip可直接使用
 
+## 0.8.0
+* 新增创建目录选项
+* 新增hook和presenter选项
+* 新增presenter简单逻辑生成
 
 # Custom Templates
 If you are not happy with the predefined templates, you can choose your

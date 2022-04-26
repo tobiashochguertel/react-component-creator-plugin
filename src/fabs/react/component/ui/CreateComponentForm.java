@@ -15,6 +15,8 @@ public class CreateComponentForm extends AbstractDialog<ComponentCreateOptions> 
     private JCheckBox markdownCheckBox;
     private JCheckBox presenterCheckBox;
     private JCheckBox useHookCheckBox;
+    private JCheckBox subComponentsCheckBox;
+    private JCheckBox viewModelCheckBox;
 
     public CreateComponentForm(ComponentCreateOptions options) {
         super(options);
@@ -50,6 +52,8 @@ public class CreateComponentForm extends AbstractDialog<ComponentCreateOptions> 
         options.setCreateMDFile(markdownCheckBox.isSelected());
         options.setCreatePresenterFile(presenterCheckBox.isSelected());
         options.setCreateHookFile(useHookCheckBox.isSelected());
+        options.setCreateSubComponent(subComponentsCheckBox.isSelected());
+        options.setCreateViewModel(viewModelCheckBox.isSelected());
         super.onOK();
     }
 

@@ -1,8 +1,8 @@
 <idea-plugin>
-    <id>com.faebeee.reactcomponentcreator</id>
+    <id>com.reactcomponentcreator</id>
     <name>React Component Creator</name>
-    <version>0.6.0</version>
-    <vendor email="faebeee@gmail.com" url="http://fabs.io">Fabio Gianini</vendor>
+    <version>0.8.0</version>
+    <vendor email="" url="">Iterator</vendor>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>

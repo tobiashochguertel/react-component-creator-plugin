@@ -4,12 +4,18 @@ import * as style from './{{ componentName }}.less';
 
 export type {{ componentCamelcaseName }}Props = {};
 
+/**
+ * {{ componentCamelcaseName }}
+ *
+ * @param props
+ * @returns {{ componentCamelcaseName }}
+ */
 const {{ componentCamelcaseName }} = (props: {{ componentCamelcaseName }}Props) => {
   return (
     <div className={style.{{ className }}}>
       {{ componentName }}
     </div>
   );
-}
+};
 
 export default {{ componentCamelcaseName }};

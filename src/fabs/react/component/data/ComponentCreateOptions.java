@@ -53,6 +53,8 @@ public class ComponentCreateOptions extends AbstractOptions {
     private Boolean isCreateMDFile = false;
     private Boolean isCreatePresenterFile = false;
     private Boolean isCreateHookFile = false;
+    private Boolean isCreateSubComponentFolder = false;
+    private Boolean isCreateViewModelFolder = false;
 
     private String componentName;
 
@@ -100,10 +102,6 @@ public class ComponentCreateOptions extends AbstractOptions {
             files.add(this.markdownTemplateFile);
         }
 
-        if (isCreateHookFile) {
-            files.add(hookTemplateFile);
-        }
-
         if (isCreatePresenterFile) {
             files.add(presenterTemplateFile);
         }
@@ -129,6 +127,25 @@ public class ComponentCreateOptions extends AbstractOptions {
             files.add(specTemplateFile);
         }
         return files;
+    }
+
+    @Override
+    public ArrayList<String> getHookFiles() {
+        ArrayList<String> files = new ArrayList<>();
+        if (isCreateHookFile) {
+            files.add(hookTemplateFile);
+        }
+        return files;
+    }
+
+    @Override
+    public boolean getCreateSubComponent() {
+        return isCreateSubComponentFolder;
+    }
+
+    @Override
+    public boolean getCreateViewModel() {
+        return isCreateViewModelFolder;
     }
 
     public void setComponentTemplateFile(String componentTemplateFile) {
@@ -285,6 +302,14 @@ public class ComponentCreateOptions extends AbstractOptions {
     }
     public void setCreateHookFile(Boolean createFile) {
         isCreateHookFile = createFile;
+    }
+
+    public void setCreateSubComponent(Boolean createFolder) {
+        isCreateSubComponentFolder = createFolder;
+    }
+
+    public void setCreateViewModel(Boolean createFolder) {
+        isCreateViewModelFolder = createFolder;
     }
 
     public boolean equals(ComponentCreateOptions options) {
