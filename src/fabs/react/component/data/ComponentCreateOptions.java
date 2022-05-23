@@ -21,6 +21,7 @@ public class ComponentCreateOptions extends AbstractOptions {
     private final String defaultComponentTemplateFile = "templates/component/{{componentName}}.tsx.mustache";
     private final String defaultLessTemplateFile = "templates/component/{{componentName}}.less.mustache";
     private final String defaultSpecTemplateFile = "templates/component/{{componentName}}.spec.tsx.mustache";
+    private final String defaultHookSpecTemplateFile = "templates/component/use{{componentCamelcaseName}}.spec.tsx.mustache";
     private final String defaultStoryTemplateFile = "templates/component/{{componentName}}.story.tsx.mustache";
     private final String defaultMarkdownTemplateFile = "templates/component/{{componentName}}.md.mustache";
     private final String defaultHookTemplateFile = "templates/component/use{{componentCamelcaseName}}.tsx.mustache";
@@ -125,6 +126,9 @@ public class ComponentCreateOptions extends AbstractOptions {
         ArrayList<String> files = new ArrayList<>();
         if (isCreateSpecFile) {
             files.add(specTemplateFile);
+            if (isCreateHookFile) {
+                files.add(defaultHookSpecTemplateFile);
+            }
         }
         return files;
     }

@@ -23,6 +23,9 @@ LESS, Spec, Storybook.
 项目构建需要使用低版本idea库，高版本不兼容，ideaIU-2020.2.4.win  https://www.jetbrains.com/idea/download/other.html
 直接导入已构建的react-component-creator-plugin-0.X.0.zip可直接使用
 
+## 0.9.0
+* 新增hook测试
+
 ## 0.8.0
 * 新增创建目录选项
 * 新增hook和presenter选项
