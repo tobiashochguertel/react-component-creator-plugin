@@ -1,7 +1,9 @@
 import React from 'react';
 
-import {{ componentCamelcaseName }}, { {{ componentCamelcaseName }}Props } from './{{componentName}}';
+import { {{ componentCamelcaseName }} } from './{{componentName}}';
 import use{{ componentCamelcaseName }} from './hooks/use{{ componentCamelcaseName }}';
+
+export type {{ componentCamelcaseName }}PresenterProps = {};
 
 /**
  * {{ componentCamelcaseName }}Presenter
@@ -9,7 +11,7 @@ import use{{ componentCamelcaseName }} from './hooks/use{{ componentCamelcaseNam
  * @param props
  * @returns {{ componentCamelcaseName }}Presenter
  */
-const {{ componentCamelcaseName }}Presenter = (props: {{ componentCamelcaseName }}Props) => {
+const {{ componentCamelcaseName }}Presenter = (props: {{ componentCamelcaseName }}PresenterProps ) => {
   const hookProps = use{{ componentCamelcaseName }}(props);
   const viewProps = {
     ...props,
@@ -18,4 +20,4 @@ const {{ componentCamelcaseName }}Presenter = (props: {{ componentCamelcaseName 
   return (<{{ componentCamelcaseName }} {...viewProps} />);
 };
 
-export default {{ componentCamelcaseName }}Presenter;
+export { {{ componentCamelcaseName }}Presenter };
