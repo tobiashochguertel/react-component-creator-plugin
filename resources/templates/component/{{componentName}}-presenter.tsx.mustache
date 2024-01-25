@@ -1,0 +1,23 @@
+import React from 'react';
+
+import { {{ componentCamelcaseName }} } from './{{componentName}}';
+import use{{ componentCamelcaseName }} from './hooks/use{{ componentCamelcaseName }}';
+
+export type {{ componentCamelcaseName }}PresenterProps = {};
+
+/**
+ * {{ componentCamelcaseName }}Presenter
+ *
+ * @param props
+ * @returns {{ componentCamelcaseName }}Presenter
+ */
+const {{ componentCamelcaseName }}Presenter = (props: {{ componentCamelcaseName }}PresenterProps ) => {
+  const hookProps = use{{ componentCamelcaseName }}(props);
+  const viewProps = {
+    ...props,
+    ...hookProps,
+  };
+  return (<{{ componentCamelcaseName }} {...viewProps} />);
+};
+
+export { {{ componentCamelcaseName }}Presenter };

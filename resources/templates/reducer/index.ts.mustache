@@ -1,11 +1,11 @@
-import { {{ componentNamePascalCase }}Actions, {{ componentNamePascalCase }}State } from './types';
+import { {{ moduleNamePascalCase }}Actions, {{ stateName }} } from './types';
 import { {{ actionTypesEnumName }} } from './action-types';
 
-export const initialState: {{ componentNamePascalCase }}State = {
+export const initialState: {{ stateName }} = {
     data: null,
 };
 
-export default function {{ componentNamePascalCase }}Reducer(state = initialState, action: {{ componentNamePascalCase }}Actions): {{ componentNamePascalCase }}State {
+export default function {{ moduleNamePascalCase }}Reducer(state = initialState, action: {{ moduleNamePascalCase }}Actions): {{ stateName }} {
     switch (action.type) {
         case {{ actionTypesEnumName }}.{{ mutationType }}:
             return {

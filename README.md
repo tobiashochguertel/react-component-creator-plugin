@@ -5,15 +5,31 @@
 ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/13965-react-component-creator?style=for-the-badge)
 
 
-w
+- An Brainstorm Plugin to create a new react functional component with all additional files like
+LESS, Spec, Storybook.
+- Add Redux reducer module with actions, mutations, state and types.
+- Add custom templates to match your coding style and your needs.
 
 
-![Settings](https://github.com/component-creator-plugin/react-component-creator-plugin/blob/master/doc/settings.png?raw=true "")
-![Create component](https://github.com/component-creator-plugin/react-component-creator-plugin/blob/master/doc/create_component.gif?raw=true "")
-![Create Reducer](https://github.com/component-creator-plugin/react-component-creator-plugin/blob/master/doc/create_reducer.gif?raw=true "")
 
-# Install
-Search for `React Component Creator` in the plugins settings. Or download the plugin from the [release site](https://github.com/component-creator-plugin/react-component-creator-plugin/releases)
+# 修改点
+
+主要是针对项目做了适配修改，比如新增模板文件、测试文件单独存放等等
+
+![image-20220423225506561](https://raw.githubusercontent.com/KingZhang/kingzhang.github.io/blog/source/assets/img/image-20220423225506561.png)
+
+![image-20220423233459847](https://raw.githubusercontent.com/KingZhang/kingzhang.github.io/blog/source/assets/img/image-20220423233459847.png)
+
+项目构建需要使用低版本idea库，高版本不兼容，ideaIU-2020.2.4.win  https://www.jetbrains.com/idea/download/other.html
+直接导入已构建的react-component-creator-plugin-0.X.0.zip可直接使用
+
+## 0.9.0
+* 新增hook测试
+
+## 0.8.0
+* 新增创建目录选项
+* 新增hook和presenter选项
+* 新增presenter简单逻辑生成
 
 # Custom Templates
 If you are not happy with the predefined templates, you can choose your
@@ -28,18 +44,17 @@ Following variables are available
 | variable | Description |
 |---|---|
 | {{componentName}} | the inputted component name. Without any alterations |
-| {{componentNameCamelCase}} | camelcased input `my-component` becomes `myComponent` |
-| {{componentNamePascalCase}} | pascalcased input `my-component` becomes `MyComponent` |
+| {{componentCamelcaseName}} | Camelcased input `my-component` becomes `MyComponent` |
 
 **Reducer**
 
 | variable | Description |
 |---|---|
-| {{componentName}} | Name of the folder |
-| {{componentNameCamelCase}} | camelcased input `my-component` becomes `myComponent` |
-| {{componentNamePascalCase}} | pascalcased input `my-component` becomes `MyComponent` |
 | {{actionFunctionName}} | Name of the function inside the `actions.ts` file |
+| {{moduleName}} | Name of the folder |
 | {{mutationType}} | String which will be used as type of the dispatch/mutation |
+| {{moduleNamePascalCase}} | Pascalcased moduleName |
+| {{stateName}} | Name for the state. `my-component` becomes `MyComponentState` |
 | {{actionTypeName}} | Takes the input of `actionFunctionName` and capitalizes the first letter and appends `Action`. From `setData` becomes `SetDataAction` |
 | {{actionTypesEnumName}} | Name used for the action types enum. actionTypesEnumName is the namespace where all `mutationType` actions are kept |
 

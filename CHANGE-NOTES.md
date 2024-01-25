@@ -1,9 +1,3 @@
-- v1.0.1 Fix default templates for stories
-- v1.0.0 Major release. Fix bugs for windows
-- v0.6.0 Use component-creator-lib
-    - Fix windows paths
-    - Update documentation
-    - Add camelcase and pascalcase variables for templates
 - v0.5.0 Checkboxes checked by default can be configured in the settings
 - v0.4.0 Add Customisable templates. Improve a lot of code. Update doc
 - v0.2.1 Export enum for action types

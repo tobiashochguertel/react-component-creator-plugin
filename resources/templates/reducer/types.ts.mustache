@@ -1,11 +1,11 @@
 import { Action } from 'redux';
 import { {{ actionTypesEnumName }} } from './action-types';
 
-export interface {{ componentNamePascalCase }}State {
+export interface {{ stateName }} {
     data: any;
 }
 
 export type {{ actionTypeName }} = Action< {{ actionTypesEnumName }}.{{ mutationType }}> & {
 }
 
-export type {{ componentNamePascalCase }}Actions = {{ actionTypeName }};
+export type {{ moduleNamePascalCase }}Actions = {{ actionTypeName }};

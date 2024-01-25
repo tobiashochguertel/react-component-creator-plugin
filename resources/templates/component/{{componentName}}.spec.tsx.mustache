@@ -1,9 +1,9 @@
 import React from 'react';
-import { expect } from 'chai';
-import {{ componentNamePascalCase }} from './{{ componentName }}';
 
-describe('Spec {{ componentNamePascalCase }}', function () {
-    it('it exists', () => {
-        expect({{ componentNamePascalCase }}).to.be.ok;
-    });
+import { {{ componentCamelcaseName }} } from '../{{ componentName }}';
+
+describe('{{ componentName }}', () => {
+  it('it exists', () => {
+    expect({{ componentCamelcaseName }}).to.be.ok;
+  });
 });
